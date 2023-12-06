@@ -1,6 +1,6 @@
 -module(aoc_util).
 
--export([read_lines/1, group_by/2]).
+-export([read_lines/1, group_by/2, with_index/1]).
 
 read_lines(Filename) ->
     {ok, Data} = file:read_file(Filename),
@@ -10,6 +10,8 @@ read_lines(Filename) ->
                 true -> Lines0
              end,
     lists:map(fun binary_to_list/1, Lines2).
+
+with_index(L) -> lists:zip(lists:seq(1, length(L)), L).
 
 group_by(Pred, List) -> group_by(Pred, List, [], []).
 
