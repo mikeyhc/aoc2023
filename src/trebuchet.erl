@@ -8,8 +8,6 @@ solve(Filename) ->
 
 solve_part1(Lines) ->
     Nums = lists:map(fun filter_nums/1, Lines),
-    lists:map(fun({X, Y}) -> io:format("~s => ~p~n", [X, Y]) end,
-              aoc_util:list_merge(Lines, Nums)),
     Pairs = lists:map(fun to_pair/1, Nums),
     lists:sum(Pairs).
 
