@@ -1,6 +1,6 @@
 -module(aoc_util).
 
--export([read_lines/1, group_by/2, with_index/1]).
+-export([read_lines/1, group_by/2, with_index/1, pair_list/1]).
 
 read_lines(Filename) ->
     {ok, Data} = file:read_file(Filename),
@@ -22,3 +22,9 @@ group_by(Pred, [H|T], Acc, Final) ->
         true -> group_by(Pred, T, [], [lists:reverse([H|Acc])|Final]);
         false -> group_by(Pred, T, [H|Acc], Final)
     end.
+
+pair_list(List) -> pair_list(List, []).
+
+pair_list([], Acc) -> lists:reverse(Acc);
+pair_list([A,B|T], Acc) ->
+    pair_list(T, [{A, B}|Acc]).
