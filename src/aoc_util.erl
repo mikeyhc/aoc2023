@@ -1,6 +1,7 @@
 -module(aoc_util).
 
--export([read_lines/1, group_by/2, with_index/1, pair_list/1]).
+-export([read_lines/1, group_by/2, with_index/1, pair_list/1, lcm/1, lcm/2,
+         gcd/2]).
 
 read_lines(Filename) ->
     {ok, Data} = file:read_file(Filename),
@@ -28,3 +29,12 @@ pair_list(List) -> pair_list(List, []).
 pair_list([], Acc) -> lists:reverse(Acc);
 pair_list([A,B|T], Acc) ->
     pair_list(T, [{A, B}|Acc]).
+
+gcd(A, A) -> A;
+gcd(A, 0) -> A;
+gcd(A, B) -> gcd(B, A rem B).
+
+lcm(A, B) -> trunc((A * B) / gcd(A, B)).
+
+lcm([H|T]) ->
+    lists:foldl(fun(X, A) -> lcm(X, A) end, H, T).

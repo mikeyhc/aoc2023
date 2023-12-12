@@ -9,3 +9,4 @@ https://adventofcode.com/2023
 * [day 5 - if you give a seed a fertilizer](src/fertilizer.erl)
 * [day 6 - wait for it](src/boats.erl)
 * [day 7 - camel cards](src/camel_cards.erl)
+* [day 8 - haunted wasteland](src/wasteland.erl)
