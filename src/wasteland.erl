@@ -5,7 +5,6 @@
 solve(Filename) ->
     Lines = aoc_util:read_lines(Filename),
     {Steps, Maps} = parse_docs(Lines),
-    % {solve_part1(Steps, Maps), solve_part2(Steps, Maps)}.
     {solve_part1(Steps, Maps), solve_part2(Steps, Maps)}.
 
 solve_part1(Steps, Maps) ->

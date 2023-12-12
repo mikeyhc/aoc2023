@@ -10,3 +10,4 @@ https://adventofcode.com/2023
 * [day 6 - wait for it](src/boats.erl)
 * [day 7 - camel cards](src/camel_cards.erl)
 * [day 8 - haunted wasteland](src/wasteland.erl)
+* [day 9 - mirage maintenance](src/mirage.erl)
