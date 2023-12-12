@@ -6,5 +6,6 @@ https://adventofcode.com/2023
 * [day 2 - cube conundrum](src/cube.erl)
 * [day 3 - gear ratios](src/gears.erl)
 * [day 4 - scratchcards](src/scratchcards.erl)
-* [day 5 - fertilizer](src/fertilizer.erl)
-* [day 6 - boats](src/boats.erl)
+* [day 5 - if you give a seed a fertilizer](src/fertilizer.erl)
+* [day 6 - wait for it](src/boats.erl)
+* [day 7 - camel cards](src/camel_cards.erl)
