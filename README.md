@@ -7,3 +7,4 @@ https://adventofcode.com/2023
 * [day 3 - gear ratios](src/gears.erl)
 * [day 4 - scratchcards](src/scratchcards.erl)
 * [day 5 - fertilizer](src/fertilizer.erl)
+* [day 6 - boats](src/boats.erl)
