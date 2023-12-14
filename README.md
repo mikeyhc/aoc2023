@@ -12,3 +12,4 @@ https://adventofcode.com/2023
 * [day 8 - haunted wasteland](src/wasteland.erl)
 * [day 9 - mirage maintenance](src/mirage.erl)
 * [day 10 - pipe maze](src/pipemaze.erl)
+* [day 11 - cosmic](src/cosmic.erl)

@@ -1,11 +1,14 @@
 -module(range).
 
--export([new/2, intersect_slice/2, add_start/2, sub_start/2, start/1]).
+-export([new/2, intersect_slice/2, add_start/2, sub_start/2, start/1,
+        contains/2, size/1]).
 
 -record(range, {start, last}).
 
 new(Start, End) ->
-    #range{start=Start, last=End}.
+    if Start > End -> #range{start=End, last=Start};
+       true -> #range{start=Start, last=End}
+    end.
 
 % returns the overlap of R0 with R1, as well as a list of the non-overlapping
 % parts
@@ -30,3 +33,8 @@ sub_start(R0=#range{start=S0, last=E0}, #range{start=S1}) ->
     R0#range{start=S0-S1, last=E0-S1}.
 
 start(#range{start=S}) -> S.
+
+contains(#range{start=S, last=E}, P) ->
+    P >= S andalso P =< E.
+
+size(#range{start=S, last=E}) -> abs(E - S).
