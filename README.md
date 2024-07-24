@@ -1,4 +1,4 @@
-# aoc2023
+# aoc2023 [![Erlang CI](https://github.com/mikeyhc/aoc2023/actions/workflows/erlang.yml/badge.svg)](https://github.com/mikeyhc/aoc2023/actions/workflows/erlang.yml)
 https://adventofcode.com/2023
 
 # list of days
