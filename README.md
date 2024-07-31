@@ -13,3 +13,4 @@ https://adventofcode.com/2023
 * [day 9 - mirage maintenance](src/mirage.erl)
 * [day 10 - pipe maze](src/pipemaze.erl)
 * [day 11 - cosmic](src/cosmic.erl)
+* [day 12 - hot springs](src/hot_springs.erl).
