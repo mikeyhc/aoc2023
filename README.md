@@ -16,3 +16,4 @@ https://adventofcode.com/2023
 * [day 12 - hot springs](src/hot_springs.erl)
 * [day 13 - point of incidence](src/point_incidence.erl)
 * [day 14 - parabolic reflector dish](src/parabolic.erl)
+* [day 15 - lens library](src/lens.erl)
