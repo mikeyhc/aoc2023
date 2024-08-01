@@ -17,3 +17,4 @@ https://adventofcode.com/2023
 * [day 13 - point of incidence](src/point_incidence.erl)
 * [day 14 - parabolic reflector dish](src/parabolic.erl)
 * [day 15 - lens library](src/lens.erl)
+* [day 16 - the floor will be lava](src/lava.erl)

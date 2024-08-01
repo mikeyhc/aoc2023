@@ -1,7 +1,7 @@
 -module(aoc_map).
 
--export([read_map/1, read_map/2, to_map/1, set_value/4, get_value/3, size/1,
-         draw_map/1]).
+-export([read_map/1, read_map/2, to_map/1, set_value/4, get_value/3,
+         get_value/2, size/1, draw_map/1]).
 
 -record(map, {rows, cols, map}).
 
@@ -39,6 +39,9 @@ set_value(Map=#map{map=M}, Row, Col, Val) ->
 
 get_value(#map{map=M}, Row, Col) ->
     maps:get({Row, Col}, M).
+
+get_value(#map{map=M}, Pos) ->
+    maps:get(Pos, M).
 
 size(#map{rows=Rows, cols=Cols}) ->
     {Rows, Cols}.
