@@ -18,3 +18,4 @@ https://adventofcode.com/2023
 * [day 14 - parabolic reflector dish](src/parabolic.erl)
 * [day 15 - lens library](src/lens.erl)
 * [day 16 - the floor will be lava](src/lava.erl)
+* [day 17 - clumsy crucible](src/crucible.erl)
