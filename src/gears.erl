@@ -19,7 +19,7 @@ solve_part2(NumMap, PartMap) ->
                         ValidGears)).
 
 build_maps(Lines) ->
-    lists:foldl(fun read_row/2, {[], #{}}, aoc_util:with_index(Lines)).
+    lists:foldl(fun read_row/2, {[], #{}}, lists:enumerate(Lines)).
 
 read_row({RowNum, Row}, Maps) -> read_row(RowNum, 1, Row, Maps).
 

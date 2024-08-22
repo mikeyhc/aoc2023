@@ -30,11 +30,11 @@ read_map(Filename, Opts) ->
     #map{rows=length(Lines),
          cols=length(hd(Lines)),
          map=lists:foldl(fun(X, Acc) -> read_row(X, Acc, Fn) end,
-                         #{}, aoc_util:with_index(Lines))
+                         #{}, lists:enumerate(Lines))
         }.
 
 read_row({RowNum, Row}, Map, Fn) ->
-    lists:foldl(Fn(RowNum), Map, aoc_util:with_index(Row)).
+    lists:foldl(Fn(RowNum), Map, lists:enumerate(Row)).
 
 to_map(#map{map=Map}) -> Map.
 
@@ -70,7 +70,7 @@ build_path_row(Map, PathMap, Trans, Row, Cols) ->
     lists:map(fun(Col) ->
                       case maps:get({Row, Col}, PathMap, false) of
                           false -> Trans(maps:get({Row, Col}, Map, $.));
-                          V -> aoc_2d:dir_char(V)
+                          V -> aoc_2d:map_dir_char(V)
                       end
               end, lists:seq(1, Cols)).
 

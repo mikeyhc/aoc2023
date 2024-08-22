@@ -19,3 +19,4 @@ https://adventofcode.com/2023
 * [day 15 - lens library](src/lens.erl)
 * [day 16 - the floor will be lava](src/lava.erl)
 * [day 17 - clumsy crucible](src/crucible.erl)
+* [day 18 - lavaduct lagoon](src/lagoon.erl)
