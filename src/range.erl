@@ -1,9 +1,12 @@
 -module(range).
 
 -export([new/2, intersect_slice/2, add_start/2, sub_start/2, start/1,
-        contains/2, size/1]).
+        contains/2, size/1, split/2, size_inc/1]).
+
+-export_type([range/0]).
 
 -record(range, {start, last}).
+-type range() :: #range{}.
 
 new(Start, End) ->
     if Start > End -> #range{start=End, last=Start};
@@ -38,3 +41,15 @@ contains(#range{start=S, last=E}, P) ->
     P >= S andalso P =< E.
 
 size(#range{start=S, last=E}) -> abs(E - S).
+
+size_inc(#range{start=S, last=E}) ->
+    if S =:= E -> 0;
+       true -> E - S  + 1
+    end.
+
+split(R0=#range{start=S, last=E}, Point) ->
+    if Point < S -> {undefined, R0};
+       Point > E -> {R0, undefined};
+       true -> {#range{start=S, last=Point - 1},
+                #range{start=Point, last=E}}
+    end.
